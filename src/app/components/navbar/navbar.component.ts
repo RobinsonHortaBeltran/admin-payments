@@ -25,15 +25,21 @@ export class NavbarComponent {
     },
     // {
     //   title: 'MIS CONTRATOS',
-    //   svg: `${this.pathSvg}/invoice.svg `,
+    //   svg: `${this.pathSvg}/invoice-icon.svg`,
     //   route: this.homeRoute,
     //   children: 'contracts',
     // },
     {
       title: 'MIS FACTURAS',
-      svg: `${this.pathSvg}/invoice-icon.svg `,
+      svg: `${this.pathSvg}/invoice-icon.svg`,
       route: this.homeRoute,
       children: 'invoices',
+    },
+    {
+      title: 'MIS PRODUCTOS',
+      svg: `${this.pathSvg}/product-icon.svg`,
+      route: this.homeRoute,
+      children: 'products',
     },
   ];
 

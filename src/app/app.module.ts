@@ -29,6 +29,9 @@ import { ContractComponent } from './components/contract/contract.component';
 import {MatDialog, MatDialogModule} from '@angular/material/dialog';
 import { DialogContentExampleDialogComponent } from './components/dialog-content-example-dialog/dialog-content-example-dialog.component';
 import {MatInputModule} from "@angular/material/input";
+import { ProductsComponent } from './components/products/products.component';
+import { ProductFormComponent } from './components/products/product-form/product-form.component';
+import { ProductImageComponent } from './components/products/product-image/product-image.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,6 +49,9 @@ import {MatInputModule} from "@angular/material/input";
     BreadcrumbComponent,
     ContractComponent,
     DialogContentExampleDialogComponent,
+    ProductsComponent,
+    ProductFormComponent,
+    ProductImageComponent
   ],
   imports: [
     BrowserModule,

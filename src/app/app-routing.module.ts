@@ -7,6 +7,7 @@ import { StartComponent } from './components/start/start.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { InvoicesComponent } from './components/invoices/invoices.component';
 import {ContractComponent} from "./components/contract/contract.component";
+import { ProductsComponent } from './components/products/products.component';
 const routes: Routes = [
   { path: '', component: LoginComponent },
   {
@@ -28,8 +29,11 @@ const routes: Routes = [
       {
         path: 'contract',
         component: ContractComponent,
-
-      }
+      },
+      {
+        path: 'products',
+        component: ProductsComponent,
+      },
       // Agrega más rutas internas si es necesario
     ],
   },
