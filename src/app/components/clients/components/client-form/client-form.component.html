@@ -1,0 +1,130 @@
+<div class="container">
+  <form [formGroup]="formulario" (ngSubmit)="onSubmit()" *ngIf="formulario">
+    <div class="row">
+      <div class="col">
+        <div class="form-floating mb-3">
+          <input type="email" class="form-control" [attr.disabled]="!camposHabilitados" formControlName="nombreCompleto"
+            id="floatingInput">
+          <label for="floatingInput">Nombre*</label>
+          <div *ngIf="formulario.get('nombreCompleto')?.invalid &&
+            (formulario.get('nombreCompleto')?.dirty || formulario.get('nombreCompleto')?.touched)" class="error-message">
+            <div *ngIf="formulario.get('nombreCompleto')?.errors?.['required']" style="color: red;">
+              *Campo Requerido
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" [attr.disabled]="!camposHabilitados" formControlName="telefono"
+            id="floatingInput">
+          <label for="floatingInput">Telefono</label>
+          <div *ngIf="formulario.get('telefono')?.invalid &&
+            (formulario.get('telefono')?.dirty || formulario.get('telefono')?.touched)" class="error-message">
+            <div *ngIf="formulario.get('telefono')?.errors?.['required']" style="color: red;">
+              *Campo Requerido
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div class="form-floating mb-3">
+          <label class="mb-2" for="floatingInput">Tipo de identificacion*</label>
+          <select type="email" class="form-control" [attr.disabled]="!camposHabilitados" formControlName="tipoIde"
+          id="floatingInput" >
+          <option value="cc">Cedula</option>
+          <option value="nit">Nit</option>
+          <option value="ti">Tarjeta de identidad</option>
+        </select>
+          <div *ngIf="formulario.get('tipoIde')?.invalid &&
+                (formulario.get('tipoIde')?.dirty || formulario.get('tipoIde')?.touched)"
+            class="error-message">
+            <div *ngIf="formulario.get('tipoIde')?.errors?.['required']" style="color: red;">
+              *Campo Requerido
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" [attr.disabled]="!camposHabilitados" formControlName="identificacion"
+            id="floatingInput">
+          <label for="floatingInput">Identificacion</label>
+          <div *ngIf="formulario.get('identificacion')?.invalid &&
+                (formulario.get('identificacion')?.dirty || formulario.get('identificacion')?.touched)" class="error-message">
+            <div *ngIf="formulario.get('identificacion')?.errors?.['required']" style="color: red;">
+              *Campo Requerido
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col">
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" [attr.disabled]="!camposHabilitados" formControlName="direccion"
+            id="floatingInput">
+          <label for="floatingInput">Direccion*</label>
+          <div *ngIf="formulario.get('direccion')?.invalid &&
+            (formulario.get('direccion')?.dirty || formulario.get('direccion')?.touched)" class="error-message">
+            <div *ngIf="formulario.get('direccion')?.errors?.['required']" style="color: red;">
+              *Campo Requerido
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" [attr.disabled]="!camposHabilitados" formControlName="email"
+            id="floatingInput">
+          <label for="floatingInput">Correo electronico*</label>
+          <div *ngIf="formulario.get('email')?.invalid &&
+            (formulario.get('email')?.dirty || formulario.get('email')?.touched)" class="error-message">
+            <div *ngIf="formulario.get('email')?.errors?.['required']" style="color: red;" >
+              *Campo Requerido
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" [attr.disabled]="!camposHabilitados" formControlName="estado"
+            id="floatingInput">
+          <label for="floatingInput">Estado*</label>
+          <div *ngIf="formulario.get('estado')?.invalid &&
+            (formulario.get('estado')?.dirty || formulario.get('estado')?.touched)" class="error-message">
+            <div *ngIf="formulario.get('estado')?.errors?.['required']" style="color: red;" >
+              *Campo Requerido
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-floating mb-3">
+          <input type="email" class="form-control" [attr.disabled]="!camposHabilitados" formControlName="fecha"
+            id="floatingInput">
+          <label for="floatingInput">Fecha*</label>
+          <div *ngIf="formulario.get('fecha')?.invalid &&
+            (formulario.get('fecha')?.dirty || formulario.get('fecha')?.touched)" class="error-message">
+            <div *ngIf="formulario.get('fecha')?.errors?.['required']" style="color: red;" >
+              *Campo Requerido
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <button mat-raised-button style="width: 100%;height: 30px;" type="submit" [disabled]="!formulario.invalid"
+          color="primary">Enviar</button>
+      </div>
+    </div>
+  </form>
+</div>

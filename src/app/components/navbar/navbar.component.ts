@@ -29,17 +29,29 @@ export class NavbarComponent {
     //   route: this.homeRoute,
     //   children: 'contracts',
     // },
+    // {
+    //   title: 'MIS FACTURAS',
+    //   svg: `${this.pathSvg}/invoice-icon.svg`,
+    //   route: this.homeRoute,
+    //   children: 'invoices',
+    // },
     {
-      title: 'MIS FACTURAS',
-      svg: `${this.pathSvg}/invoice-icon.svg`,
+      title: 'AGREGAR CLIENTE',
+      svg: `${this.pathSvg}/person-add.svg`,
       route: this.homeRoute,
-      children: 'invoices',
+      children: 'clients',
     },
     {
       title: 'MIS PRODUCTOS',
       svg: `${this.pathSvg}/product-icon.svg`,
       route: this.homeRoute,
       children: 'products',
+    },
+    {
+      title: 'REALIZAR VENTA',
+      svg: `${this.pathSvg}/cart-shoping.svg`,
+      route: this.homeRoute,
+      children: 'sales',
     },
   ];
 

@@ -32,6 +32,11 @@ import {MatInputModule} from "@angular/material/input";
 import { ProductsComponent } from './components/products/products.component';
 import { ProductFormComponent } from './components/products/product-form/product-form.component';
 import { ProductImageComponent } from './components/products/product-image/product-image.component';
+import { SalesComponent } from './components/sales/sales.component';
+import { SalesFormComponent } from './components/sales/components/sales-form/sales-form.component';
+import { ClientsComponent } from './components/clients/clients.component';
+import { ClientFormComponent } from './components/clients/components/client-form/client-form.component';
+import { ClientToolsComponent } from './components/clients/components/client-tools/client-tools.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,7 +56,12 @@ import { ProductImageComponent } from './components/products/product-image/produ
     DialogContentExampleDialogComponent,
     ProductsComponent,
     ProductFormComponent,
-    ProductImageComponent
+    ProductImageComponent,
+    SalesComponent,
+    SalesFormComponent,
+    ClientsComponent,
+    ClientFormComponent,
+    ClientToolsComponent
   ],
   imports: [
     BrowserModule,
